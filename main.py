@@ -109,6 +109,7 @@ def best_developer_year( anio : int ):
     # Crear una lista de diccionarios en el formato requerido
     lista_puestos = [{"Puesto " + str(i+1): app_name} for i, app_name in enumerate(app_names)]
     return lista_puestos
+
 # Endpoints 5
 
 @app.get('/developer2/{desarrolladora}')
