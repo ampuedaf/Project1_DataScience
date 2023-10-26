@@ -147,6 +147,7 @@ def developer_year(anio: int):
     desarrolladores.columns = ['app_name', 'count']
     desarrolladores = desarrolladores.sort_values(by='count', ascending=False)
     top_desarrolladores = desarrolladores.head(3)
-    lista_puestos = [{"Puesto " + str(i+1): top_desarrolladores} for i, top_desarrolladores in enumerate(top_desarrolladores)]
+    dict_desarrolladores = top_desarrolladores.to_dict(orient='records')
+    lista_puestos = [{"Puesto " + str(i+1): dict_desarrolladores} for i, dict_desarrolladores in enumerate(dict_desarrolladores)]
     return lista_puestos
     
