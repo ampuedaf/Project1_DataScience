@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 import pandas as pd
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 
@@ -11,7 +13,7 @@ df_1_3 = pd.read_csv(r"datasets/df_funcion2.csv")
 df_1_4 = pd.read_csv(r"datasets/df_funcion3.csv")
 df_1_5 = pd.read_csv(r"datasets/df_funcion4.csv")
 df_1_6 = pd.read_csv(r"datasets/df_funcion5.csv")
-
+df_1_7 = pd.read_csv(r"datasets/df_funcion6.csv")
 
 
 # Endpoints 1
@@ -136,6 +138,32 @@ def developer2( desarrolladora : str ):
     }
     return result
 
+# Modelo de Machine LEarning:
+
+# Crear un vectorizador TF-IDF para convertir títulos en vectores numéricos
+# Crear una matriz TF-IDF para representar los juegos
+tfidf_vectorizer = TfidfVectorizer()
+tfidf_matrix = tfidf_vectorizer.fit_transform(df_1_7.head()['title'] + ' ' + df_1_7.head()['tags'] + ' ' + df_1_7.head()['genres'])
+
+# Calcular la similitud de coseno entre los juegos
+cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+
+# Endpoints 6
+
+
+# Función definida para el sistema de recomendación item-item:
+@app.get('/recomendacion_juego/{title}')
+def recomendacion_juego(title, num_recommendations=5):
+    idx = df_1_7[df_1_7['title'] == title].index[0]
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    num_recommendations = int(num_recommendations)
+    sim_scores = sim_scores[1:num_recommendations+1]  
+    game_indices = [i[0] for i in sim_scores]
+    resultado3 = {"Juegos recomendados  por  Item-Item ":title}
+    diccionario2 = df_1_7['title'].iloc[game_indices].tolist()
+    return resultado3,diccionario2
+    
 
 
     
