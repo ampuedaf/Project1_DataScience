@@ -99,19 +99,16 @@ def UserForGenre( genero : str ):
 
 @app.get('/best_developer_year/{anio}')
 def best_developer_year( anio : int ):
-   
+    df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
     # Filtrar el dataset por el año  desead
-    df_filtrado = df_1_5[df_1_5['posted'] == anio]
-    
+    df_filtrado = df_4[df_4['posted'] == anio]
     # Agrupar los datos por el app_name  y la columna boolena recomend  
     df_agrupado = df_filtrado.groupby('app_name')['recommend'].value_counts().reset_index()
     df_ordenado = df_agrupado.sort_values(by='count', ascending=False)
     app_names = df_ordenado['app_name'].head(3).tolist()
-    
     # Crear una lista de diccionarios en el formato requerido
     lista_puestos = [{"Puesto " + str(i+1): app_name} for i, app_name in enumerate(app_names)]
     return lista_puestos
-
 # Endpoints 5
 
 @app.get('/developer2/{desarrolladora}')
