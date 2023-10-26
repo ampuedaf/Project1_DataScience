@@ -139,10 +139,10 @@ def developer2( desarrolladora : str ):
 """
 #end point 6
 @app.get('/developer_year/{anio}')
-def developer_year( anio : int ):
+def developer_year(anio: int):
     df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
-    # Filtrar el dataset por el año  desead
     df_filtrado = df_4[df_4['posted'] == anio]
+    df_filtrado = df_filtrado.drop(columns=['recommend'])  # Eliminar la columna 'recommend' existente
     df_filtrado = df_filtrado.groupby('app_name')['recommend'].value_counts().reset_index()
     df_filtrado = df_filtrado.sort_values(by='count', ascending=False)
     dict_puestos = df_filtrado.to_dict(orient='records')
