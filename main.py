@@ -6,11 +6,11 @@ import pandas as pd
 app = FastAPI()
 
 #aca cargo todos los dataframe que vamos a utilizar
-df_1_2 = pd.read_csv(r"venv/datasets/df_funcion1.csv")
-df_1_3 = pd.read_csv(r"venv/datasets/df_funcion2.csv")
-df_1_4 = pd.read_csv(r"venv/datasets/df_funcion3.csv")
-df_1_5 = pd.read_csv(r"venv/datasets/df_funcion4.csv")
-df_1_6 = pd.read_csv(r"venv/datasets/df_funcion5.csv")
+df_1_2 = pd.read_csv(r"datasets/df_funcion1.csv")
+df_1_3 = pd.read_csv(r"datasets/df_funcion2.csv")
+df_1_4 = pd.read_csv(r"datasets/df_funcion3.csv")
+df_1_5 = pd.read_csv(r"datasets/df_funcion4.csv")
+df_1_6 = pd.read_csv(r"datasets/df_funcion5.csv")
 
 
 
