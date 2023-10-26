@@ -16,7 +16,7 @@ df_1_6 = pd.read_csv(r"datasets/df_funcion5.csv")
 
 # Endpoints 1
 
-"""
+
 
 @app.get('/developer/{desarrollador}')
 def developer( desarrollador ):
@@ -97,17 +97,17 @@ def UserForGenre( genero : str ):
 
 # Endpoints 4
 
-@app.get('/best_developer_year/{anio}')
-def best_developer_year( anio : int ):
+@app.get('/developer_year/{anio}')
+def developer_year(anio: int):
     df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
-    # Filtrar el dataset por el año  desead
     df_filtrado = df_4[df_4['posted'] == anio]
-    # Agrupar los datos por el app_name  y la columna boolena recomend  
-    df_agrupado = df_filtrado.groupby('app_name')['recommend'].value_counts().reset_index()
-    df_ordenado = df_agrupado.sort_values(by='count', ascending=False)
-    app_names = df_ordenado['app_name'].head(3).tolist()
-    # Crear una lista de diccionarios en el formato requerido
-    lista_puestos = [{"Puesto " + str(i+1): app_name} for i, app_name in enumerate(app_names)]
+    df_filtrado = df_filtrado[df_filtrado['recommend'] == True]
+    desarrolladores = df_filtrado['app_name'].value_counts().reset_index()
+    desarrolladores.columns = ['app_name', 'count']
+    desarrolladores = desarrolladores.sort_values(by='count', ascending=False)
+    top_desarrolladores = desarrolladores.head(3)
+    dict_desarrolladores = top_desarrolladores.to_dict(orient='records')
+    lista_puestos = [{"Puesto " + str(i+1): dict_desarrolladores} for i, dict_desarrolladores in enumerate(dict_desarrolladores)]
     return lista_puestos
 
 # Endpoints 5
@@ -136,18 +136,6 @@ def developer2( desarrolladora : str ):
     }
     return result
 
-"""
-#end point 6
-@app.get('/developer_year/{anio}')
-def developer_year(anio: int):
-    df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
-    df_filtrado = df_4[df_4['posted'] == anio]
-    df_filtrado = df_filtrado[df_filtrado['recommend'] == True]
-    desarrolladores = df_filtrado['app_name'].value_counts().reset_index()
-    desarrolladores.columns = ['app_name', 'count']
-    desarrolladores = desarrolladores.sort_values(by='count', ascending=False)
-    top_desarrolladores = desarrolladores.head(3)
-    dict_desarrolladores = top_desarrolladores.to_dict(orient='records')
-    lista_puestos = [{"Puesto " + str(i+1): dict_desarrolladores} for i, dict_desarrolladores in enumerate(dict_desarrolladores)]
-    return lista_puestos
+
+
     
