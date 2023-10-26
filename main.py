@@ -16,7 +16,7 @@ df_1_6 = pd.read_csv(r"datasets/df_funcion5.csv")
 
 # Endpoints 1
 
-
+"""
 
 @app.get('/developer/{desarrollador}')
 def developer( desarrollador ):
@@ -136,7 +136,7 @@ def developer2( desarrolladora : str ):
     }
     return result
 
-
+"""
 #end point 6
 @app.get('/developer_year/{anio}')
 def developer_year( anio : int ):
