@@ -130,8 +130,17 @@ def developer2( desarrolladora : str ):
     
     # Convierte el resultado en un diccionario
     result = {
-    desarrolladora:{    
+    desarrolladora:{   
     'Negative': int(sentiment_counts.get(0, 0)),
     'Positive': int(sentiment_counts.get(2, 0))}
     }
     return result
+
+
+#end point 6
+@app.get('/developer_year')
+def developer_year():
+    df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
+    lista_puestos = df_4.head(3)
+    dict_puestos = lista_puestos.to_dict(orient='records')
+    return dict_puestos
