@@ -138,9 +138,11 @@ def developer2( desarrolladora : str ):
 
 
 #end point 6
-@app.get('/developer_year')
-def developer_year():
+@app.get('/developer_year/{anio}')
+def developer_year( anio : int ):
     df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
-    lista_puestos = df_4.head(3)
+    # Filtrar el dataset por el año  desead
+    df_filtrado = df_4[df_4['posted'] == anio]
+    lista_puestos = df_filtrado.head(3)
     dict_puestos = lista_puestos.to_dict(orient='records')
     return dict_puestos
