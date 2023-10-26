@@ -143,5 +143,9 @@ def developer_year(anio: int):
     df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
     df_filtrado = df_4[df_4['posted'] == anio]
     df_filtrado = df_filtrado[df_filtrado['recommend'] == True]
-    dict_puestos = df_filtrado.to_dict(orient='records')
-    return dict_puestos
+    desarrolladores = df_filtrado['app_name'].value_counts().reset_index()
+    desarrolladores.columns = ['app_name', 'count']
+    desarrolladores = desarrolladores.sort_values(by='count', ascending=False)
+    top_desarrolladores = desarrolladores.head(3)
+    dict_desarrolladores = top_desarrolladores.to_dict(orient='records')
+    return dict_desarrolladores
