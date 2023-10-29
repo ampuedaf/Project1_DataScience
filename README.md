@@ -26,6 +26,7 @@ Este proyecto corresponde al primero de la etapa de* Lab's* del programa de **Da
 <p align="center">
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/xCLWk9md/henry2.png' border='0' alt='henry2'/></a>
 </p>
+
 ## Contenido del Repositorio.
 
 ------------
@@ -33,17 +34,17 @@ En este repositorio se encuentran almacenadas dos carpetas y cuatro archivos:
 En este repositorio se encuentran almacenadas dos carpetas y cuatro archivos:
 - En la carpeta datasets se encuentran siete archivos csv: Estos datasets tienen su origen de un Dataset Padre, del cual proviene de la integración de los 3 datasets otorgados.  Se trabajo de acuerdo a los requerimientos de cada una de las funciones solicitadas.
 
-     - df_funcion1.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la primera función. denominada : **def developer( desarrollador : str ): **
-	 - df_funcion2.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la segunda función. denominada: **def userdata( User_id : str ): **
+     - df_funcion1.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la primera función. denominada : **def developer( desarrollador : str ):**
+	 - df_funcion2.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la segunda función. denominada: **def userdata( User_id : str ):**
 	 - df_funcion3.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la tercera función. Denominada: **def UserForGenre( genero : str ):**
-	 - df_funcion4.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la cuarta función. Denominada: **def best_developer_year( año : int ): **
-	 - df_funcion5.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la quinta función. Denominada: **def developer_reviews_analysis( desarrolladora : str ): **
+	 - df_funcion4.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la cuarta función. Denominada: **def best_developer_year( año : int ):**
+	 - df_funcion5.csv : datos limpios obtenidos después del proceso de ETL, con los datos desanidados, a partir de los cuales se realizó la quinta función. Denominada: **def developer_reviews_analysis( desarrolladora : str ):**
 	 - df_funcion6.csv: datos con solo los campos de interés a partir de los cuales se realizó la última función relacionada a** machine-learning.**
 
 
-- En la carpeta **src **se encuentran los recursos (imágenes) utilizadas para la elaboración del presente Readme.
+- En la carpeta **src**se encuentran los recursos (imágenes) utilizadas para la elaboración del presente Readme.
 - En el archivo **ETL** se encuentra la documentación y el paso a paso del ETL.
-- En el archivo** EDA** se encuentra la documentación y el paso a paso del EDA.
+- En el archivo **EDA** se encuentra la documentación y el paso a paso del EDA.
 - En el archivo **main** se encuentra el programa principal que contiene las siete funciones y su conexión con la API.
 - En el archivo **requirements** se encuentran las librerías utilizadas indicadas en la API.
 
