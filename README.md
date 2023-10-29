@@ -21,6 +21,7 @@
 
 ------------
 Este proyecto corresponde al primero de la etapa de* Lab's* del programa de **Data Science de Henry**. El rol a desempeñar es el de **MLOps Engineer.**
+
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/xCLWk9md/henry2.png' border='0' alt='henry2'/></a>
 
 ## Contenido del Repositorio.
