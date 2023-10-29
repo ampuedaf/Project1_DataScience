@@ -1,7 +1,7 @@
-<p align="center">
+
 # PROYECTO INDIVIDUAL Nº1
 ## Machine Learning Operations (MLOps)
-</p>
+
 ![]<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/mD6TwLDy/MLOPS2.jpg' border='0' alt='MLOPS2'/></a>
 ## Indice
 
