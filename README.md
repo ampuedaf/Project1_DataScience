@@ -1,8 +1,8 @@
-#PROYECTO INDIVIDUAL Nº1
-##Machine Learning Operations (MLOps)
+# PROYECTO INDIVIDUAL Nº1
+## Machine Learning Operations (MLOps)
 
 ![]<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/mD6TwLDy/MLOPS2.jpg' border='0' alt='MLOPS2'/></a>
-##Indice
+## Indice
 
 ------------
 
@@ -17,13 +17,13 @@
 - Herramientas utilizadas
 - Colaboradores
 
-##Introducción
+## Introducción
 
 ------------
 Este proyecto corresponde al primero de la etapa de* Lab's* del programa de **Data Science de Henry**. El rol a desempeñar es el de **MLOps Engineer.**
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/xCLWk9md/henry2.png' border='0' alt='henry2'/></a>
 
-##Contenido del Repositorio.
+## Contenido del Repositorio.
 
 ------------
 En este repositorio se encuentran almacenadas dos carpetas y cuatro archivos:
@@ -44,17 +44,17 @@ En este repositorio se encuentran almacenadas dos carpetas y cuatro archivos:
 - En el archivo **main** se encuentra el programa principal que contiene las siete funciones y su conexión con la API.
 - En el archivo **requirements** se encuentran las librerías utilizadas indicadas en la API.
 
-##Contexto de los datos.
+## Contexto de los datos.
 
 Los datos a partir de los cuales se desarrolló el proyecto fueron siete archivos en formato csv: df_funcion1.csv, df_funcion2.csv, df_funcion3.csv, df_funcion4.csv, df_funcion5.csv y df_funcion6.csv.
 
 - Datasets otorgados: Enlace a los datasets
 - Diccionario del dataset movies_dataset.csv: Enlace al diccionario
 
-##Propuesta de trabajo.
+## Propuesta de trabajo.
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/NFRD7x78/Diagrama-Conceptual-Del-Flujo-De-Procesos.png' border='0' alt='Diagrama-Conceptual-Del-Flujo-De-Procesos'/></a>
 
-##ETL.
+## ETL.
 - Desanidar datos de diversos campos.
 - Revisión, manejo e imputación de nulos.
 - Transformaciones de tipo de dato en diversos campos.
@@ -65,7 +65,7 @@ Los datos a partir de los cuales se desarrolló el proyecto fueron siete archivo
 
 Se puede revisar el paso a paso documentado de este proceso en el siguiente link: Notebook ETL
 
-##EDA.
+## EDA.
 - Obtención de correlaciones de las variables numéricas.
 - Generación de pairplots e histogramas de ciertas variables.
 - Detección de patrones.
@@ -77,7 +77,7 @@ Se puede revisar el paso a paso documentado de este proceso en el siguiente link
 
 Se puede revisar el paso a paso documentado de este proceso en el siguiente link: Notebook EDA
 
-##Machine-learning.
+## Machine-learning.
 
 - Filtrar el dataset a partir de los géneros del título ingresado.
 - Vectorizar los campos de interés "title" , "tags" y "genres".
@@ -86,7 +86,7 @@ Se puede revisar el paso a paso documentado de este proceso en el siguiente link
 - Crear un diccionario con los datos correspondientes a las cinco titulos de juegos  elegidos.
 - Se puede revisar el paso a paso documentado del proceso de ML en la sección final del siguiente link: Notebook ML.
 
-##Resultado.
+## Resultado.
 <a href='https://postimg.cc/PCtnTxX9' target='_blank'><img src='https://i.postimg.cc/wjNq5ySq/image.png' border='0' alt='image'/></a>
 El resultado final consiste en una API renderizada con las seis requeridas.
 
@@ -94,7 +94,7 @@ Se puede acceder a ella en el siguiente link:[ API](https://fastapi-5q3t.onrende
 
 Se puede revisar el paso a paso documentado de las seis funciones en el siguiente link: Notebook Funciones.
 
-##Herramientas utilizadas.
+## Herramientas utilizadas.
 - Python
 - Scikit-Learn
 - Pandas
@@ -104,6 +104,6 @@ Se puede revisar el paso a paso documentado de las seis funciones en el siguient
 - FastAPI
 - Render API
 
-##Colaboradores.
+## Colaboradores.
 - Freddy Ampueda.
 
