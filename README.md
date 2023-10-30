@@ -67,7 +67,7 @@ Los datos a partir de los cuales se desarrolló el proyecto fueron siete archivo
 - Eliminación de columnas innecesarias.
 - Exportación de los datos transformados a un nuevo CSV.
 
-Se puede revisar el paso a paso documentado de este proceso en el siguiente link: Notebook ETL
+Se puede revisar el paso a paso documentado de este proceso en el siguiente link: [Notebook ETL](Project1_DataScience/ETL.ipynb)
 
 ## EDA.
 - Obtención de correlaciones de las variables numéricas.
