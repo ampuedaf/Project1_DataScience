@@ -52,7 +52,7 @@ En este repositorio se encuentran almacenadas dos carpetas y cuatro archivos:
 
 Los datos a partir de los cuales se desarrolló el proyecto fueron siete archivos en formato csv: df_funcion1.csv, df_funcion2.csv, df_funcion3.csv, df_funcion4.csv, df_funcion5.csv y df_funcion6.csv.
 
-- Datasets otorgados: [Enlace a los datasets] (https://drive.google.com/drive/folders/1qyq-didCwr35Q9m2BOByNjYOf4rSQiYu "dataset")
+- Datasets otorgados: [Enlace a los datasets](https://drive.google.com/drive/folders/1qyq-didCwr35Q9m2BOByNjYOf4rSQiYu "dataset")
 
 
 ## Propuesta de trabajo.
