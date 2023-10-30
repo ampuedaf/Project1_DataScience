@@ -52,8 +52,8 @@ En este repositorio se encuentran almacenadas dos carpetas y cuatro archivos:
 
 Los datos a partir de los cuales se desarrolló el proyecto fueron siete archivos en formato csv: df_funcion1.csv, df_funcion2.csv, df_funcion3.csv, df_funcion4.csv, df_funcion5.csv y df_funcion6.csv.
 
-- Datasets otorgados: Enlace a los datasets
-- Diccionario del dataset movies_dataset.csv: Enlace al diccionario
+- Datasets otorgados: [Enlace a los datasets] (https://drive.google.com/drive/folders/1qyq-didCwr35Q9m2BOByNjYOf4rSQiYu "dataset")
+
 
 ## Propuesta de trabajo.
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/NFRD7x78/Diagrama-Conceptual-Del-Flujo-De-Procesos.png' border='0' alt='Diagrama-Conceptual-Del-Flujo-De-Procesos'/></a>
@@ -110,4 +110,5 @@ Se puede revisar el paso a paso documentado de las seis funciones en el siguient
 
 ## Colaboradores.
 - Freddy Ampueda.
-
+- correo: ampueda@gmail.com
+  
