@@ -82,7 +82,7 @@ def userdata( User_id : str ):
 @app.get('/UserForGenre/{genero}')
 def UserForGenre( genero : str ):
     """
-    Esta funcióndevuelve el usuario que acumula mas horas jugadas para el genero dado, y una 
+    Esta función devuelve el usuario que acumula mas horas jugadas para el genero dado, y una 
     lista de acumulación de horas jugadas por año de lanzamiento.
     """
 
