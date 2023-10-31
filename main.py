@@ -22,7 +22,10 @@ df_1_7 = pd.read_csv(r"datasets/df_funcion6.csv")
 
 @app.get('/developer/{desarrollador}')
 def developer( desarrollador ):
-    
+    """
+    Esta función al poner como parametro un desarrollador dará como resultado la cantidad de items y porcentaje  de contenido FREE 
+    por año segun empresa desarrolladora
+    """
      # Verifica que desarrollador sea un string
     if not isinstance(desarrollador, str):
         return {"Error": f"'{desarrollador}' is not a string"}
@@ -52,6 +55,11 @@ def developer( desarrollador ):
 
 @app.get('/userdata/{User_id}')
 def userdata( User_id : str ):
+    """
+    Esta función al poner como parametro un user_id , devolvera la cantidad de dinero gastado 
+    por el usuario, el porcentaje de recomendaciónen base a review recommend y la cantidad de
+    items
+    """
     # Verifica que User_id  sea un string
     if not isinstance(User_id, str):
         return {"Error": f"'{User_id}' is not a string"}
@@ -73,6 +81,10 @@ def userdata( User_id : str ):
 
 @app.get('/UserForGenre/{genero}')
 def UserForGenre( genero : str ):
+    """
+    Esta funcióndevuelve el usuario que acumula mas horas jugadas para el genero dado, y una 
+    lista de acumulación de horas jugadas por año de lanzamiento.
+    """
 
     # Verifica que genero sea un string
     if not isinstance(genero, str):
@@ -101,6 +113,9 @@ def UserForGenre( genero : str ):
 
 @app.get('/developer_year/{anio}')
 def developer_year(anio: int):
+    """
+    Esta función al poner un año determinado, devolverá  el top 3 de desarrolladores con juegos mas recomendados.
+    """
     df_4 = pd.read_csv(r"datasets/df_funcion4.csv")
     df_filtrado = df_4[df_4['posted'] == anio]
     df_filtrado = df_filtrado[df_filtrado['recommend'] == True]
@@ -116,6 +131,11 @@ def developer_year(anio: int):
 
 @app.get('/developer2/{desarrolladora}')
 def developer2( desarrolladora : str ):
+    """
+    Esta funcion al poner una empresa desarrolladora, devolverá un diccionario con el nombre del desarrollador como
+    llave y una lista con la cantidad total de registros de de reseñas de usuarios que se encuentran categorizados
+    por un analisis de sentimiento.
+    """
 
     # Verifica que desarrollador sea un string
     if not isinstance(desarrolladora, str):
@@ -154,6 +174,10 @@ cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
 # Función definida para el sistema de recomendación item-item:
 @app.get('/recomendacion_juego/{title}')
 def recomendacion_juego(title, num_recommendations=5):
+    """
+    Esta función  devuelve 5 juegos recomendados. Esta función se hizo con la similitud del coseno entre los juegos.
+    Para esta función se  tuvo que crear un vectorizador TF_IDF y una matriz TF-IDF.
+    """
     idx = df_1_7[df_1_7['title'] == title].index[0]
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
