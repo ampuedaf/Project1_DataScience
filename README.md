@@ -71,15 +71,14 @@ Se puede revisar el paso a paso documentado de este proceso en el siguiente link
 
 ## EDA.
 - Obtención de correlaciones de las variables numéricas.
-- Generación de pairplots e histogramas de ciertas variables.
+- Generación de pairplots de ciertas variables.
 - Detección de patrones.
 - Análisis de correlaciones y distribuciones.
-- Eliminación de datos con poca influencia o poco útiles.
 - Realización de word clouds para descubrir las palabras más frecuentes.
 - Elección de las variables para el modelo de Machine Learning.
 - Exportación de los datos finales a un nuevo CSV.
 
-Se puede revisar el paso a paso documentado de este proceso en el siguiente link: Notebook EDA
+Se puede revisar el paso a paso documentado de este proceso en el siguiente link: [Notebook EDA](/EDA.ipynb)
 
 ## Machine-learning.
 
@@ -88,8 +87,7 @@ Se puede revisar el paso a paso documentado de este proceso en el siguiente link
 - Obtener la similitud de coseno entre el título ingresado y los demás a partir de sus vectores.
 - Comparar los índices de similitud y obtener las cinco más similares.
 - Crear un diccionario con los datos correspondientes a las cinco titulos de juegos  elegidos.
-- Se puede revisar el paso a paso documentado del proceso de ML en la sección final del siguiente link: Notebook ML.
-
+- Se puede revisar el paso a paso documentado del proceso de ML en la sección final del siguiente link: [Notebook ML](/EDA.ipynb)
 ## Resultado.
 <a href='https://postimg.cc/PCtnTxX9' target='_blank'><img src='https://i.postimg.cc/wjNq5ySq/image.png' border='0' alt='image'/></a>
 El resultado final consiste en una API renderizada con las seis requeridas.
